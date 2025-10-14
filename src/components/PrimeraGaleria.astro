@@ -1,0 +1,46 @@
+---
+import PacayaSamiria from "../assets/urubamba.png";
+import Heliconia from "../assets/cusco.png";
+import Cumaceba from "../assets/tingo-maria.png";
+---
+<section class="relative grid grid-cols-1 lg:grid-cols-2 my-12 h-auto lg:h-[80vh]">
+    <div class="relative group h-[300px] sm:h-[400px] lg:h-auto">
+        <img src={PacayaSamiria.src} alt="URUBAMBA - VALLE SAGRADO" loading="lazy" class="w-full h-full object-cover"/>
+        <a href="./urubamba-valle-sagrado" class="absolute inset-0 z-30 flex flex-col justify-end p-4 sm:p-6 lg:p-10 pb-8 sm:pb-10 lg:pb-16 group-hover:bg-black/40">
+            <h2 class="font-bold text-white text-xl lg:text-2xl mb-2">
+                Urubamba – Valle Sagrado de los Incas
+            </h2>
+            <p class="text-white text-sm max-w-md backdrop-blur-sm bg-black/30 p-2 rounded-md">
+                En el corazón del Valle Sagrado, Las Cabañas Ecolodge Urubamba te ofrece un refugio natural entre montañas y jardines, ideal para descansar y reconectarte con la energía andina.
+            </p>
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2">
+        <div class="relative group h-[300px] sm:h-[400px] lg:h-auto">
+            <img src={Heliconia.src} alt="CUSCO - EXPERIENCIAS" loading="lazy" class="w-full h-full object-cover"/>
+            <a href="./cusco" class="absolute inset-0 z-30 flex flex-col justify-end p-4 sm:p-6 lg:p-10 pb-8 sm:pb-10 lg:pb-16 group-hover:bg-black/40">
+                <h2 class="font-bold text-white text-xl lg:text-2xl mb-2">
+                    Cusco – Casa Mirador
+                </h2>
+                <p class="text-white text-sm max-w-md backdrop-blur-sm bg-black/30 p-2 rounded-md">
+                    A minutos del aeropuerto, Casa Rústica Mirador te conecta con la esencia y magia de Cusco.
+                </p>
+            </a>
+        </div>
+
+        <div class="relative group h-[300px] sm:h-[400px] lg:h-auto">
+            <img src={Cumaceba.src} alt="TINGO MARÍA - SELVA CENTRAL" loading="lazy" class="w-full h-full object-cover"/>
+            <a href="./tingo-maria" class="absolute inset-0 z-30 flex flex-col justify-end p-4 sm:p-6 lg:p-10 pb-8 sm:pb-10 lg:pb-16 group-hover:bg-black/40">
+                <h2 class="font-bold text-white text-xl lg:text-2xl mb-2">
+                    Tingo María – Cabaña entre Montañas
+                </h2>
+                <p class="text-white text-sm max-w-md backdrop-blur-sm bg-black/30 p-2 rounded-md">
+                    En las montañas de Tingo María, vive una experiencia de desconexión total rodeado de naturaleza y paz.
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
+</section>

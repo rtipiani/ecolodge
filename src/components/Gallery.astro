@@ -1,0 +1,55 @@
+---
+import gal1 from "../assets/galeria/gal1.png";
+import gal2 from "../assets/galeria/gal2.png";
+import gal3 from "../assets/galeria/gal3.png";
+import gal4 from "../assets/galeria/gal4.png";
+import gal5 from "../assets/galeria/gal5.png";
+import gal6 from "../assets/galeria/gal6.png";
+import gal7 from "../assets/galeria/gal7.png";
+import gal8 from "../assets/galeria/gal8.png";
+import gal9 from "../assets/galeria/gal9.png";
+import gal10 from "../assets/galeria/gal10.png";
+import gal11 from "../assets/galeria/gal11.png";
+
+const images = [
+    gal1,
+    gal2,
+    gal3,
+    gal4,
+    gal5,
+    gal6,
+    gal7,
+    gal8,
+    gal9,
+    gal10,
+    gal11
+];
+---
+<section class="max-w-7xl mx-auto px-4 py-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pswp-gallery" id="my-gallery">
+        {images.map((image, index) => (
+            <a href={typeof image === 'string' ? image : image.src} rel="noreferrer" aria-label="Imagen de Ecolodge Cabañas y Retiros"
+               class="shadow-sm" data-pswp-width="831"
+               data-pswp-height="552">
+                <div class="relative group cursor-pointer">
+                    <img loading={index > 5 ? 'lazy' : 'eager'} src={typeof image === 'string' ? image : image.src} alt="Ecolodge Cabañas y Retiros" 
+                         class="object-cover object-top w-full h-full rounded-md" />
+                    <p class="flex text-white backdrop-blur-md bg-black/40 text-2xl absolute font-bold w-full gap-2 items-center top-0 h-full justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+                        </svg>
+                        Ecolodge Cabañas y Retiros
+                    </p>
+                </div>
+            </a>
+        ))}
+    </div>
+</section>
+
+<script>
+    import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+    const lightbox = new PhotoSwipeLightbox({ gallery:   '#my-gallery', children: 'a', pswpModule: () => import('photoswipe')
+    });
+    lightbox.init();
+</script>
