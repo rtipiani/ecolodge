@@ -1,39 +1,30 @@
 ---
-import deluxe5 from "../assets/about-5.png";
-import deluxe6 from "../assets/about-7.png";
-import deluxe7 from "../assets/about-8.png";
+import deluxe5 from "../assets/about-7.png";
+import deluxe6 from "../assets/about-8.png";
+import deluxe7 from "../assets/about-9.png";
 ---
 <section class="relative py-12 bg-white overflow-hidden"> 
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div class="relative w-full order-1 lg:order-1 rounded-3xl overflow-hidden">
             <div class="grid grid-cols-2 gap-4">
                 <img src={deluxe5.src} alt="Cabaña Deluxe Mística principal" class="w-full h-[220px] sm:h-[280px] lg:h-[340px] object-cover rounded-2xl shadow-lg"/>
-        <img 
-          src={deluxe6.src} 
-          alt="Área interior de la cabaña" 
-          class="w-full h-[220px] sm:h-[280px] lg:h-[340px] object-cover rounded-2xl shadow-lg"
-        />
-        <img 
-          src={deluxe7.src} 
-          alt="Vista exterior rodeada de naturaleza" 
-          class="col-span-2 w-full h-[220px] sm:h-[280px] lg:h-[340px] object-cover rounded-2xl shadow-lg"
-        />
-      </div>
+                <img src={deluxe6.src} alt="Área interior de la cabaña" class="w-full h-[220px] sm:h-[280px] lg:h-[340px] object-cover rounded-2xl shadow-lg"/>
+                <img src={deluxe7.src} alt="Vista exterior rodeada de naturaleza"  class="col-span-2 w-full h-[220px] sm:h-[280px] lg:h-[340px] object-cover rounded-2xl shadow-lg"/>
+            </div>
 
-      <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
+            <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
 
-      <!-- 🧾 Tarjetas de descripción (solo escritorio) -->
-      <div class="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 gap-4 w-[90%] justify-center">
-        <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-full lg:w-[240px] text-black text-xs hover:scale-105 transition-transform duration-300 text-center flex flex-col items-center justify-center">
-          <h4 class="font-semibold mb-1">Espacio familiar</h4>
-          <p>Cabañas amplias con sala y área de descanso para grupos o familias.</p>
+            <div class="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 gap-4 w-[90%] justify-center">
+                <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-full lg:w-[240px] text-black text-xs hover:scale-105 transition-transform duration-300 text-center flex flex-col items-center justify-center">
+                    <h4 class="font-semibold mb-1">Espacio familiar</h4>
+                    <p>Cabañas amplias con sala y área de descanso para grupos o familias.</p>
+                </div>
+                <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-full lg:w-[240px] text-black text-xs hover:scale-105 transition-transform duration-300 delay-150 text-center flex flex-col items-center justify-center">
+                    <h4 class="font-semibold mb-1">Comodidad natural</h4>
+                    <p>Ambiente cálido rodeado de vegetación y silencio para un descanso total.</p>
+                </div>
+            </div>
         </div>
-        <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-full lg:w-[240px] text-black text-xs hover:scale-105 transition-transform duration-300 delay-150 text-center flex flex-col items-center justify-center">
-          <h4 class="font-semibold mb-1">Comodidad natural</h4>
-          <p>Ambiente cálido rodeado de vegetación y silencio para un descanso total.</p>
-        </div>
-      </div>
-    </div>
 
     <!-- 📄 Bloque de texto (centrado verticalmente) -->
     <div class="relative z-10 order-2 lg:order-2 flex flex-col justify-center h-full">
