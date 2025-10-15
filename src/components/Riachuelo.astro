@@ -1,62 +1,71 @@
 ---
-import about3 from "../assets/about-3.png"
+import about3 from "../assets/about-3.png";
+import about4 from "../assets/about-10.png";
 ---
 <section class="relative py-12 bg-white overflow-hidden"> 
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"> 
-        <div class="relative w-full rounded-3xl shadow-2xl overflow-hidden"> 
-            <img src={about3.src} alt="Cabaña del Riachuelo" class="w-full h-[300px] sm:h-[400px] lg:h-[480px] object-cover object-center rounded-3xl transition-all duration-300"> 
-            <div class="absolute inset-0 bg-black/20 rounded-3xl"></div> 
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"> 
+    <!-- 🖼️ Bloque de imágenes -->
+    <div class="relative w-full rounded-3xl overflow-hidden">
+      <div class="grid grid-cols-2 gap-4">
+        <img 
+          src={about3.src} 
+          alt="Cabaña del Riachuelo vista exterior" 
+          class="w-full h-[220px] sm:h-[280px] lg:h-[340px] object-cover rounded-2xl shadow-lg"
+        />
+        <img 
+          src={about4.src} 
+          alt="Interior acogedor de la Cabaña del Riachuelo" 
+          class="w-full h-[220px] sm:h-[280px] lg:h-[340px] object-cover rounded-2xl shadow-lg"
+        />
+      </div>
+      <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
 
-            <div class="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 gap-4 w-[90%]"> 
-                <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-full lg:w-[240px] text-gray-800 text-xs hover:scale-105 transition-transform duration-300"> 
-                    <h4 class="font-semibold mb-1">Independencia total</h4> 
-                    <p>Disfruta de un espacio privado rodeado de naturaleza.</p> 
-                </div> 
-                <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-full lg:w-[240px] text-gray-800 text-xs hover:scale-105 transition-transform duration-300 delay-150"> 
-                    <h4 class="font-semibold mb-1">Diseño acogedor</h4> 
-                    <p>Ambiente cálido, con terraza y azador exclusivo.</p> 
-                </div> 
-            </div> 
+      <!-- 🧾 Tarjetas sobre imagen (solo escritorio) -->
+      <div class="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 gap-4 w-[90%] justify-center">
+        <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-full lg:w-[240px] text-gray-800 text-xs hover:scale-105 transition-transform duration-300 text-center flex flex-col items-center justify-center"> 
+          <h4 class="font-semibold mb-1">Independencia total</h4> 
+          <p>Disfruta de un espacio privado rodeado de naturaleza.</p> 
         </div> 
-
-        <div class="relative z-10 mt-6 lg:mt-0"> 
-            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-500 mb-4">
-                Cabaña del Riachuelo <span class="text-black text-sm">(para 2 - 3 personas)</span>
-            </h2> 
-
-            <p class="text-black leading-relaxed text-sm mb-4">
-                Perfecta para compartir y disfrutar de un espacio totalmente independiente,  <strong>la Cabaña del Riachuelo</strong> combina privacidad, confort y contacto directo con la naturaleza.
-            </p>
-
-            <p class="text-black leading-relaxed text-sm mb-4">
-                Cuenta con <strong>kitchen</strong>, refrigerador, termo, tazas, agua,  <strong>terraza y azador privado</strong> —todo lo necesario para que te sientas como en casa, rodeado del silencio y la energía del <em>Valle Sagrado</em>.
-            </p>
-
-            <p class="text-black leading-relaxed text-sm mb-4">
-                Ideal para 1 a 3 personas, diseñada con calidez, comodidad y un entorno natural que invita al descanso y la conexión.
-            </p>
-
-            <div class="mt-6 bg-orange-50 border border-orange-200 rounded-xl p-4 w-fit shadow-md">
-                <h3 class="text-orange-500 font-semibold text-lg">Precio por noche</h3>
-                <p class="text-black text-sm mt-1">Para 2 o 3 personas</p>
-                <p class="text-2xl font-bold text-orange-500 mt-1">S/ 280</p>
-            </div>
-
-            <a href="https://wa.link/ngq3h9" class="inline-block mt-6 px-5 py-2 bg-orange-400 hover:bg-orange-500 text-white rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 text-sm">
-                Consultar disponibilidad
-                <i class="fa-brands fa-whatsapp ml-2"></i>
-            </a> 
-
-            <div class="flex flex-col lg:hidden gap-3 mt-6">    
-                <div class="bg-white shadow-lg rounded-xl p-3 text-black text-xs hover:scale-105 transition-transform duration-300"> 
-                    <h4 class="font-semibold mb-1">Independencia total</h4> 
-                    <p>Disfruta de un espacio privado rodeado de naturaleza.</p> 
-                </div> 
-                <div class="bg-white shadow-lg rounded-xl p-3 text-black text-xs hover:scale-105 transition-transform duration-300"> 
-                    <h4 class="font-semibold mb-1">Diseño acogedor</h4> 
-                    <p>Ambiente cálido, con terraza y azador exclusivo.</p> 
-                </div> 
-            </div> 
+        <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-full lg:w-[240px] text-gray-800 text-xs hover:scale-105 transition-transform duration-300 delay-150 text-center flex flex-col items-center justify-center"> 
+          <h4 class="font-semibold mb-1">Diseño acogedor</h4> 
+          <p>Ambiente cálido, con terraza y azador exclusivo.</p> 
         </div> 
-    </div> 
+      </div>
+    </div>
+
+    <!-- 📄 Bloque de texto (centrado verticalmente) -->
+    <div class="relative z-10 flex flex-col justify-center h-full">
+      <div>
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-500 mb-4 text-center lg:text-left">
+          Cabaña del Riachuelo <span class="text-black text-sm">(para 2 - 3 personas)</span>
+        </h2> 
+
+        <p class="text-black leading-relaxed text-sm mb-4 text-justify">
+          Perfecta para compartir y disfrutar de un espacio totalmente independiente,  
+          <strong>la Cabaña del Riachuelo</strong> combina privacidad, confort y contacto directo con la naturaleza.
+        </p>
+
+        <p class="text-black leading-relaxed text-sm mb-4 text-justify">
+          Cuenta con <strong>kitchen</strong>, refrigerador, termo, tazas, agua,  
+          <strong>terraza y azador privado</strong> —todo lo necesario para que te sientas como en casa, rodeado del silencio y la energía del <em>Valle Sagrado</em>.
+        </p>
+
+        <p class="text-black leading-relaxed text-sm mb-4 text-justify">
+          Ideal para 1 a 3 personas, diseñada con calidez, comodidad y un entorno natural que invita al descanso y la conexión.
+        </p>
+
+        <div class="mt-6 bg-orange-50 border border-orange-200 rounded-xl p-4 w-fit shadow-md mx-auto lg:mx-0 text-center">
+          <h3 class="text-orange-500 font-semibold text-lg">Precio por noche</h3>
+          <p class="text-black text-sm mt-1">Para 2 o 3 personas</p>
+          <p class="text-2xl font-bold text-orange-500 mt-1">S/ 280</p>
+        </div>
+
+        <a href="https://wa.link/ngq3h9" 
+           class="block mt-6 mx-auto lg:mx-0 w-fit px-5 py-2 bg-orange-400 hover:bg-orange-500 text-white rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 text-sm text-center">
+          Consultar disponibilidad
+          <i class="fa-brands fa-whatsapp ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
