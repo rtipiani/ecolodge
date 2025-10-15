@@ -8,13 +8,13 @@ declare global {
 <section class="bg-white sm:p-4 lg:max-w-7xl mx-auto">
     <div class="p-8 rounded-md mb-8">
         <div class="text-center space-y-2 mb-8">
-            <h2 class="text-green-800 text-3xl font-medium text-center">
+            <h2 class="text-orange-500 text-3xl font-medium text-center">
                 Ponte en contacto con nosotros
             </h2>
             <p class="text-zinc-500">
                 Su dirección de correo electrónica no será publicada
             </p>
-            <p class="text-sm text-red-700">
+            <p class="text-sm text-orange-600">
                 Los campos obligatorios están marcados*
             </p>
         </div>
@@ -25,31 +25,31 @@ declare global {
                     <label for="name" class="text-gray-500 mb-2 block">
                         Nombre y Apellidos
                     </label>
-                    <input class="p-4 border border-green-700 outline-green-700 rounded-lg w-full" type="text" id="name" name="name" placeholder="Ingrese sus datos" required>
+                    <input class="p-4 border border-orange-400 outline-orange-500 rounded-lg w-full" type="text" id="name" name="name" placeholder="Ingrese sus datos" required>
                 </div>
                 <div>
                     <label for="email" class="text-gray-500 mb-2 block">
                         Correo electrónico
                     </label>
-                    <input class="p-4 border border-green-700 outline-green-700 rounded-lg w-full" type="email" id="email" name="email" placeholder="Ingrese un correo electrónico" required>
+                    <input class="p-4 border border-orange-400 outline-orange-500 rounded-lg w-full" type="email" id="email" name="email" placeholder="Ingrese un correo electrónico" required>
                 </div>
                 <div>
                     <label for="telephone" class="text-gray-500 mb-2 block">
                         Número telefónico
                     </label>
-                    <input class="p-4 border border-green-700 outline-green-700 rounded-lg w-full" type="tel" id="telephone" name="telephone" placeholder="Ingrese un número telefónico" required pattern="[0-9]{9,15}" title="Debe contener entre 9 y 15 dígitos numéricos">
+                    <input class="p-4 border border-orange-400 outline-orange-500 rounded-lg w-full" type="tel" id="telephone" name="telephone" placeholder="Ingrese un número telefónico" required pattern="[0-9]{9,15}" title="Debe contener entre 9 y 15 dígitos numéricos">
                 </div>
                 <div>
                     <label for="subject" class="text-gray-500 mb-2 block">
                         Asunto
                     </label>
-                    <input class="p-4 border border-green-700 outline-green-700 rounded-lg w-full" type="text" id="subject" name="subject" placeholder="Ingrese el asunto" required>
+                    <input class="p-4 border border-orange-400 outline-orange-500 rounded-lg w-full" type="text" id="subject" name="subject" placeholder="Ingrese el asunto" required>
                 </div>
                 <div class="md:col-span-2">
                     <label for="message" class="text-gray-500 mb-2 block">
                         Mensaje
                     </label>
-                    <textarea class="p-4 border border-green-700 outline-green-700 rounded-lg w-full" id="message" name="message" placeholder="Escribe tu mensaje aquí... (mínimo 50 caracteres)" required minlength="50" maxlength="1000"></textarea>
+                    <textarea class="p-4 border border-orange-400 outline-orange-500 rounded-lg w-full" id="message" name="message" placeholder="Escribe tu mensaje aquí... (mínimo 50 caracteres)" required minlength="50" maxlength="1000"></textarea>
                     <p class="text-sm text-gray-600 mt-1">Mínimo 50 caracteres.</p>
                 </div>                
                 <div class="mt-4 flex justify-center md:col-span-2 lg:flex lg:justify-center">
@@ -57,12 +57,12 @@ declare global {
                 </div>
             </div>
             <div class="mt-4 text-center">
-                <button type="submit" class="py-4 px-8 text-center bg-green-700 hover:bg-green-800 rounded-md text-white text-md cursor-pointer">
+                <button type="submit" class="py-4 px-8 text-center bg-orange-400 hover:bg-orange-500 rounded-md text-white text-md cursor-pointer">
                     Enviar mensaje
                     <i class="fa-solid fa-location-arrow ml-2"></i>
                 </button>
             </div>
-            <p id="form-status" class="text-center text-md text-green-700 mt-4 hidden"></p>
+            <p id="form-status" class="text-center text-md text-orange-500 mt-4 hidden"></p>
         </form>
     </div>
 </section>
