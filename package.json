@@ -11,7 +11,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@tailwindcss/vite": "^4.1.14",
-    "astro": "^5.14.4",
+    "astro": "^6.4.6",
     "photoswipe": "^5.4.4",
     "tailwindcss": "^4.1.14"
   }

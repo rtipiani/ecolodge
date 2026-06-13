@@ -1,0 +1,415 @@
+---
+import img1 from "../assets/jungle_awakening.png";
+import img2 from "../assets/slide2.png";
+import img3 from "../assets/andean_spirit.png";
+import img4 from "../assets/riachuelo1.png";
+import img5 from "../assets/about-7.png";
+
+const pillars = [
+  {
+    id: "plant-medicine",
+    icon: "fa-solid fa-leaf",
+    badge: "🌿",
+    titleEs: "Plant Medicine & Ceremonias Ancestrales",
+    titleEn: "Plant Medicine & Ancestral Ceremonies",
+    subtitleEs: "Introspección profunda y expansión de conciencia",
+    subtitleEn: "Deep introspection & consciousness expansion",
+    descriptionEs:
+      "Experiencias ceremoniales ancestrales facilitadas por especialistas aliados, diseñadas para procesos profundos de introspección, liberación emocional, autoconocimiento y expansión de conciencia.",
+    descriptionEn:
+      "Ancestral ceremonial experiences facilitated by allied specialists, designed for deep introspection, emotional release, self-knowledge, and consciousness expansion.",
+    itemsEs: [
+      "Ceremonia de Ayahuasca (facilitada por especialistas aliados)",
+      "Ceremonia de San Pedro / Huachuma",
+      "Preparación previa e integración emocional",
+      "Ceremonias privadas o grupales",
+      "Sesiones de integración guiada",
+    ],
+    itemsEn: [
+      "Ayahuasca Ceremony (facilitated by allied specialists)",
+      "San Pedro / Huachuma Ceremony",
+      "Pre-ceremony preparation & emotional integration",
+      "Private or group ceremonies",
+      "Guided integration sessions",
+    ],
+    legalEs:
+      "Las ceremonias son facilitadas por especialistas externos aliados y coordinadas previamente según disponibilidad, perfil del participante y criterios de bienestar.",
+    legalEn:
+      "Ceremonies are facilitated by external allied specialists and coordinated in advance based on availability, participant profile, and wellness criteria.",
+    waText:
+      "Hola, me gustaría obtener información sobre las Ceremonias de Plant Medicine.",
+    image: img1,
+  },
+  {
+    id: "spiritual-practices",
+    icon: "fa-solid fa-person-praying",
+    badge: "🔥",
+    titleEs: "Prácticas Espirituales y Holísticas",
+    titleEn: "Spiritual & Holistic Practices",
+    subtitleEs: "Rituales de sanación y reconexión interior",
+    subtitleEn: "Healing rituals & inner reconnection",
+    descriptionEs:
+      "Un espacio sagrado para reconectar contigo mismo a través de prácticas ancestrales y modernas de sanación. Cada sesión está diseñada para liberar bloqueos y restaurar el equilibrio.",
+    descriptionEn:
+      "A sacred space to reconnect with yourself through ancestral and modern healing practices. Each session is designed to release blockages and restore balance.",
+    itemsEs: [
+      "Ceremonia de Cacao",
+      "Temazcal",
+      "Limpieza energética en catarata o río",
+      "Breathwork y meditación guiada",
+      "Ritual de fuego / liberación emocional",
+      "Música medicina y círculos de sanación",
+    ],
+    itemsEn: [
+      "Cacao Ceremony",
+      "Temazcal",
+      "Energetic cleansing at waterfall or river",
+      "Breathwork & guided meditation",
+      "Fire ritual / emotional release",
+      "Medicine music & healing circles",
+    ],
+    legalEs: null,
+    legalEn: null,
+    waText:
+      "Hola, me gustaría obtener información sobre las Prácticas Espirituales y Holísticas.",
+    image: img2,
+  },
+  {
+    id: "renace-retreats",
+    icon: "fa-solid fa-seedling",
+    badge: "✨",
+    titleEs: "Retiros Transformacionales RENACE",
+    titleEn: "RENACE Transformational Retreats",
+    subtitleEs: "Programas de inmersión para tu transformación",
+    subtitleEn: "Immersive programs for your transformation",
+    descriptionEs:
+      "Nuestros retiros RENACE son programas de inmersión diseñados para guiarte en un proceso profundo de sanación y transformación personal, combinando naturaleza, espiritualidad y acompañamiento profesional.",
+    descriptionEn:
+      "Our RENACE retreats are immersion programs designed to guide you through deep personal healing and transformation, combining nature, spirituality, and professional support.",
+    itemsEs: [
+      "Retiro RENACE (programa insignia)",
+      "Retiro de sanación emocional",
+      "Retiro de reconexión espiritual",
+      "Retiro privado inmersivo",
+      "Retiro de bienestar corporativo",
+    ],
+    itemsEn: [
+      "RENACE Retreat (signature program)",
+      "Emotional healing retreat",
+      "Spiritual reconnection retreat",
+      "Private immersive retreat",
+      "Corporate wellbeing retreat",
+    ],
+    legalEs: null,
+    legalEn: null,
+    waText:
+      "Hola, me gustaría obtener información sobre los Retiros Transformacionales RENACE.",
+    image: img3,
+  },
+  {
+    id: "integration-support",
+    icon: "fa-solid fa-heart",
+    badge: "💚",
+    titleEs: "Integración y Acompañamiento Emocional",
+    titleEn: "Integration & Emotional Support",
+    subtitleEs: "Sostén antes, durante y después del proceso",
+    subtitleEn: "Support before, during & after your journey",
+    descriptionEs:
+      "Creemos que la transformación real ocurre en la integración. Nuestro equipo te acompaña para que puedas anclar tus experiencias y convertirlas en cambios duraderos en tu vida cotidiana.",
+    descriptionEn:
+      "We believe real transformation happens in integration. Our team supports you to anchor your experiences and turn them into lasting changes in your everyday life.",
+    itemsEs: [
+      "Coaching transformacional",
+      "Sesiones de integración emocional",
+      "Reflexión y journaling guiado",
+      "Caminatas conscientes en la naturaleza",
+      "Círculos grupales de sanación",
+    ],
+    itemsEn: [
+      "Transformational coaching",
+      "Emotional integration sessions",
+      "Guided reflection & journaling",
+      "Conscious nature walks",
+      "Group healing circles",
+    ],
+    legalEs: null,
+    legalEn: null,
+    waText:
+      "Hola, me gustaría obtener información sobre los servicios de Integración y Acompañamiento Emocional.",
+    image: img4,
+  },
+  {
+    id: "sacred-celebrations",
+    icon: "fa-solid fa-star",
+    badge: "🌸",
+    titleEs: "Celebraciones Sagradas",
+    titleEn: "Sacred Celebrations",
+    subtitleEs: "Momentos únicos en espacios de naturaleza",
+    subtitleEn: "Unique moments in natural sacred spaces",
+    descriptionEs:
+      "Celebra los momentos más importantes de tu vida en un entorno natural sagrado. Diseñamos ceremonias personalizadas que combinan lo simbólico, lo espiritual y la belleza del entorno.",
+    descriptionEn:
+      "Celebrate life's most meaningful moments in a sacred natural setting. We design personalized ceremonies combining symbolism, spirituality, and the beauty of the surroundings.",
+    itemsEs: [
+      "Cumpleaños holísticos",
+      "Bodas espirituales",
+      "Ceremonias de bendición para parejas",
+      "Celebraciones conscientes a medida",
+    ],
+    itemsEn: [
+      "Holistic birthdays",
+      "Spiritual weddings",
+      "Couple blessing ceremonies",
+      "Tailor-made conscious celebrations",
+    ],
+    legalEs: null,
+    legalEn: null,
+    waText:
+      "Hola, me gustaría obtener información sobre las Celebraciones Sagradas.",
+    image: img5,
+  },
+];
+
+const waBase = "https://wa.me/51984746645?text=";
+---
+
+<section class="py-12 sm:py-16 bg-[#F5EFE6]">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
+
+    <!-- Header + language toggle -->
+    <div class="flex flex-col items-center text-center mb-8 gap-3">
+      <p class="text-xs font-bold tracking-widest text-[#8F5547] uppercase">
+        <span class="lang-es">Lo Que Ofrecemos</span>
+        <span class="lang-en hidden">What We Offer</span>
+      </p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#6B2F1A] tracking-tight leading-tight">
+        <span class="lang-es">Servicios & Experiencias Ancestrales</span>
+        <span class="lang-en hidden">Ancestral Services & Experiences</span>
+      </h2>
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-[#6B4C3B]/80 leading-relaxed">
+        <span class="lang-es">Una selección cuidada de retiros, ceremonias y experiencias holísticas — diseñadas con preparación, seguridad y guía respetuosa.</span>
+        <span class="lang-en hidden">A curated selection of retreats, ceremonies, and holistic experiences — designed with preparation, safety, and respectful guidance.</span>
+      </p>
+
+      <!-- Language toggle -->
+      <div class="flex items-center gap-1 bg-[#EDE0D0] rounded-full p-1 text-xs font-bold">
+        <button id="btn-es" class="lang-toggle-btn px-4 py-1.5 rounded-full bg-orange-400 text-white transition-all duration-300">
+          ES
+        </button>
+        <button id="btn-en" class="lang-toggle-btn px-4 py-1.5 rounded-full text-[#6B2F1A] hover:bg-[#E0CEB8] transition-all duration-300">
+          EN
+        </button>
+      </div>
+    </div>
+
+    <!-- Accordion -->
+    <div id="pillars-accordion" class="flex flex-col gap-4">
+      {pillars.map((pillar, i) => (
+        <div
+          class="pillar-item rounded-2xl border border-[#E8D9C8] bg-[#FAF4EC] overflow-hidden transition-shadow duration-300"
+          data-index={i}
+        >
+          <!-- Trigger row -->
+          <button
+            class="pillar-trigger w-full flex items-center gap-4 px-6 py-5 text-left focus:outline-none transition-colors duration-300"
+            aria-expanded={i === 0 ? "true" : "false"}
+            aria-controls={`panel-${pillar.id}`}
+          >
+            <!-- Emoji badge -->
+            <span class="flex-shrink-0 text-2xl leading-none select-none">
+              {pillar.badge}
+            </span>
+
+            <!-- Titles -->
+            <div class="flex-1 min-w-0">
+              <span class="pillar-title block font-bold text-base sm:text-lg text-[#3D2010] leading-snug">
+                <span class="lang-es">{pillar.titleEs}</span>
+                <span class="lang-en hidden">{pillar.titleEn}</span>
+              </span>
+              <span class="block text-xs text-[#9B7B6A] mt-0.5 leading-none">
+                <span class="lang-es">{pillar.subtitleEs}</span>
+                <span class="lang-en hidden">{pillar.subtitleEn}</span>
+              </span>
+            </div>
+
+            <!-- Toggle icon -->
+            <span class="pillar-toggle flex-shrink-0 w-8 h-8 rounded-full border border-[#D4C0AE] flex items-center justify-center text-[#8F5547] transition-all duration-300">
+              <i class="fa-solid fa-plus text-xs transition-transform duration-300"></i>
+            </span>
+          </button>
+
+          <!-- Panel -->
+          <div
+            id={`panel-${pillar.id}`}
+            class="pillar-panel overflow-hidden transition-all duration-500 ease-in-out"
+            style={i === 0 ? "max-height:900px;opacity:1;" : "max-height:0px;opacity:0;"}
+          >
+            <!-- Divider -->
+            <div class="mx-8 border-t border-[#E8D9C8]"></div>
+
+            <div class="px-8 pt-6 pb-10 grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+
+              <!-- Text side -->
+              <div class="md:col-span-3 flex flex-col gap-5">
+                <p class="text-sm sm:text-base text-[#5C3D2A] leading-relaxed">
+                  <span class="lang-es">{pillar.descriptionEs}</span>
+                  <span class="lang-en hidden">{pillar.descriptionEn}</span>
+                </p>
+
+                <ul class="flex flex-col gap-2.5">
+                  {pillar.itemsEs.map((itemEs, j) => (
+                    <li class="flex items-start gap-3 text-sm text-[#4A2E1A] font-medium">
+                      <span class="mt-0.5 w-5 h-5 flex-shrink-0 rounded-full bg-[#E3C033]/30 border border-[#E3C033]/70 flex items-center justify-center">
+                        <i class="fa-solid fa-check text-[9px] text-[#8F5547]"></i>
+                      </span>
+                      <span>
+                        <span class="lang-es">{itemEs}</span>
+                        <span class="lang-en hidden">{pillar.itemsEn[j]}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <!-- Price placeholder -->
+                <div class="inline-flex items-center gap-2 text-xs text-[#8F5547] bg-[#F0E4D4] border border-[#DBC9B0] rounded-lg px-3 py-2 self-start">
+                  <i class="fa-solid fa-tag text-[10px]"></i>
+                  <span class="lang-es font-semibold">Precio: Consultar disponibilidad</span>
+                  <span class="lang-en hidden font-semibold">Price: Ask for availability</span>
+                </div>
+
+                <!-- Legal note (plant medicine only) -->
+                {pillar.legalEs && (
+                  <p class="text-[10px] text-[#9B7B6A] italic leading-relaxed border-l-2 border-[#DBC9B0] pl-3">
+                    <span class="lang-es">{pillar.legalEs}</span>
+                    <span class="lang-en hidden">{pillar.legalEn}</span>
+                  </p>
+                )}
+
+                <!-- WhatsApp CTA -->
+                <a
+                  href={`${waBase}${encodeURIComponent(pillar.waText)}`}
+                  target="_blank"
+                  rel="noopener"
+                  class="self-start inline-flex items-center gap-2 px-5 py-2.5 bg-orange-400 hover:bg-orange-500 text-white font-bold text-xs rounded-xl shadow-sm transition-all duration-300 uppercase tracking-wider"
+                  aria-label={`Book ${pillar.titleEn}`}
+                >
+                  <i class="fa-brands fa-whatsapp text-base"></i>
+                  <span class="lang-es">Reservar Experiencia</span>
+                  <span class="lang-en hidden">Book Experience</span>
+                </a>
+              </div>
+
+              <!-- Image side -->
+              <div class="md:col-span-2 bg-[#F0E4D4] rounded-2xl p-3 shadow-inner">
+                <div class="overflow-hidden rounded-xl h-52 sm:h-64">
+                  <img
+                    src={pillar.image.src}
+                    alt={pillar.titleEn}
+                    class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .pillar-item.is-open .pillar-trigger {
+    background-color: rgb(251 146 60); /* orange-400 */
+    border-radius: 1rem 1rem 0 0;
+  }
+  .pillar-item.is-open .pillar-title {
+    color: #fff;
+  }
+  /* subtitle */
+  .pillar-item.is-open .pillar-trigger span.block {
+    color: rgba(255,255,255,0.85);
+  }
+  .pillar-item.is-open .pillar-toggle {
+    border-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.25);
+  }
+  .pillar-item.is-open .pillar-toggle i {
+    transform: rotate(45deg);
+    color: #fff;
+  }
+</style>
+
+<script is:inline>
+(function () {
+  /* ── Accordion ── */
+  const items = Array.from(document.querySelectorAll('.pillar-item'));
+
+  function openItem(item) {
+    const panel = item.querySelector('.pillar-panel');
+    const trigger = item.querySelector('.pillar-trigger');
+    if (!panel || !trigger) return;
+    item.classList.add('is-open');
+    trigger.setAttribute('aria-expanded', 'true');
+    panel.style.maxHeight = (panel.scrollHeight + 400) + 'px';
+    panel.style.opacity = '1';
+  }
+
+  function closeItem(item) {
+    const panel = item.querySelector('.pillar-panel');
+    const trigger = item.querySelector('.pillar-trigger');
+    if (!panel || !trigger) return;
+    item.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+    panel.style.maxHeight = '0px';
+    panel.style.opacity = '0';
+  }
+
+  if (items.length) openItem(items[0]);
+
+  items.forEach((item) => {
+    item.querySelector('.pillar-trigger').addEventListener('click', () => {
+      const wasOpen = item.classList.contains('is-open');
+      items.forEach(closeItem);
+      if (!wasOpen) openItem(item);
+    });
+  });
+
+  /* ── Language toggle ── */
+  const btnEs = document.getElementById('btn-es');
+  const btnEn = document.getElementById('btn-en');
+
+  function setLang(lang) {
+    const isEs = lang === 'es';
+    document.querySelectorAll('.lang-es').forEach(el => el.classList.toggle('hidden', !isEs));
+    document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', isEs));
+
+    if (btnEs && btnEn) {
+      if (isEs) {
+        btnEs.classList.add('bg-orange-400', 'text-white');
+        btnEs.classList.remove('text-[#6B2F1A]', 'hover:bg-[#E0CEB8]');
+        btnEn.classList.remove('bg-orange-400', 'text-white');
+        btnEn.classList.add('text-[#6B2F1A]', 'hover:bg-[#E0CEB8]');
+      } else {
+        btnEn.classList.add('bg-orange-400', 'text-white');
+        btnEn.classList.remove('text-[#6B2F1A]', 'hover:bg-[#E0CEB8]');
+        btnEs.classList.remove('bg-orange-400', 'text-white');
+        btnEs.classList.add('text-[#6B2F1A]', 'hover:bg-[#E0CEB8]');
+      }
+    }
+
+    // Recalculate open panel height (content may resize)
+    items.forEach(item => {
+      if (item.classList.contains('is-open')) {
+        const panel = item.querySelector('.pillar-panel');
+        if (panel) panel.style.maxHeight = (panel.scrollHeight + 400) + 'px';
+      }
+    });
+  }
+
+  btnEs && btnEs.addEventListener('click', () => setLang('es'));
+  btnEn && btnEn.addEventListener('click', () => setLang('en'));
+})();
+</script>

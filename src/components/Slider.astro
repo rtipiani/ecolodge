@@ -6,84 +6,239 @@ import slide3 from "../assets/slide3.png";
 const slides = [
     {
         image: slide1,
+        badge: "Retiros & Bienestar",
         title: "Un refugio de paz en la naturaleza",
-        description: "Vive experiencias transformadoras en un espacio diseñado para sanar y reconectar.",
-        buttonText: "Consultar Ahora",
+        description: "Vive experiencias transformadoras en un espacio diseñado para sanar y reconectar con tu esencia más profunda.",
         position: "object-right",
     },
     {
         image: slide2,
+        badge: "Ceremonias Ancestrales",
         title: "Ceremonias y encuentros conscientes",
-        description: "Conecta contigo mismo y con la comunidad en un entorno de armonía.",
-        buttonText: "Consultar Ahora",
+        description: "Conecta contigo mismo y con la comunidad en un entorno de armonía, guiado por tradiciones ancestrales.",
         position: "object-center",
     },
     {
         image: slide3,
+        badge: "Experiencias Únicas",
         title: "Encuentros con la naturaleza",
-        description: "Descubre la magia de cada rincón diseñado para acoger, sanar y renovar.",
-        buttonText: "Consultar Ahora",
+        description: "Descubre la magia de cada rincón diseñado para acoger, sanar y renovar tu espíritu en los Andes.",
         position: "object-[30%_50%]",
     },
 ];
 ---
-<div class="relative w-full h-screen overflow-hidden">
-    <div id="slider" class="flex transition-transform duration-700 ease-in-out w-full h-full">
-        {slides.map((slide, index) => (
-            <div class="w-full h-full flex-shrink-0 relative aspect-[16/9]" data-slide={index}>
-                <img src={slide.image.src ?? slide.image} alt={slide.title} width="1920" height="1080" class={`w-full h-full object-cover ${slide.position}`} loading="lazy"/>
-                <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/40 px-6">
-                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 max-w-[80%] sm:max-w-[60%] lg:max-w-[50%] leading-tight drop-shadow-lg">
+
+<div
+    id="hero-slider"
+    class="relative w-full h-screen min-h-[560px] overflow-hidden group/slider"
+>
+    <!-- Slides -->
+    <div id="slider-track" class="relative w-full h-full">
+        {slides.map((slide, i) => (
+            <div
+                class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out"
+                data-index={i}
+                aria-hidden={i !== 0}
+                style={i === 0 ? "opacity:1;z-index:10;" : "opacity:0;z-index:0;"}
+            >
+                <!-- Ken Burns Image -->
+                <div class="w-full h-full overflow-hidden">
+                    <img
+                        src={slide.image.src ?? slide.image}
+                        alt={slide.title}
+                        width="1920"
+                        height="1080"
+                        class={`ken-burns-img w-full h-full object-cover ${slide.position} scale-110`}
+                        loading={i === 0 ? "eager" : "lazy"}
+                    />
+                </div>
+
+                <!-- Gradient Overlay: dark left vignette + subtle bottom gradient -->
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+                <!-- Slide Content -->
+                <div class="slide-content absolute inset-0 flex flex-col justify-center px-8 sm:px-12 md:px-20 lg:px-28 max-w-3xl">
+                    <!-- Badge -->
+                    <div class="slide-badge mb-4 opacity-0 translate-y-4 transition-all duration-700 delay-100">
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest bg-orange-400/20 border border-orange-400/50 text-orange-300 backdrop-blur-sm">
+                            <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse inline-block"></span>
+                            {slide.badge}
+                        </span>
+                    </div>
+
+                    <!-- Title -->
+                    <h1 class="slide-title text-white font-extrabold leading-tight tracking-tight drop-shadow-lg mb-5 opacity-0 translate-y-4 transition-all duration-700 delay-200
+                        text-2xl sm:text-3xl md:text-4xl lg:text-4xl">
                         {slide.title}
-                    </h2>
-                    <p class="text-sm sm:text-base md:text-lg mb-5 max-w-[85%] sm:max-w-[60%] lg:max-w-[45%] opacity-90 drop-shadow-md">
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="slide-desc text-gray-200 text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-xl opacity-0 translate-y-4 transition-all duration-700 delay-300 drop-shadow-md">
                         {slide.description}
                     </p>
-                    <a href="https://wa.link/ngq3h9" class="bg-orange-400 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg flex items-center gap-2 transition duration-300" target="_blank">
-                        {slide.buttonText}
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+
+                    <!-- CTA Buttons -->
+                    <div class="slide-cta flex flex-col sm:flex-row items-start gap-4 opacity-0 translate-y-4 transition-all duration-700 delay-[400ms]">
+                        <a
+                            href="https://wa.link/ngq3h9"
+                            target="_blank"
+                            class="inline-flex items-center gap-2.5 px-7 py-3.5 bg-orange-400 hover:bg-orange-500 text-white font-bold rounded-xl shadow-lg hover:shadow-orange-400/30 transition-all duration-300 text-sm sm:text-base transform hover:-translate-y-0.5"
+                            aria-label="Consultar en WhatsApp"
+                        >
+                            Consultar Ahora
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a
+                            href="/retiros"
+                            class="inline-flex items-center gap-2 px-7 py-3.5 border border-white/40 hover:border-white/80 text-white font-semibold rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/20 transition-all duration-300 text-sm sm:text-base"
+                        >
+                            Ver Experiencias
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         ))}
     </div>
 
-    <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-3 cursor-pointer" aria-label="Ir al slider anterior">
-        <i class="fa-solid fa-chevron-left fa-2xl"></i>
+    <!-- Arrow: Previous -->
+    <button
+        id="prev-slide"
+        class="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/25 hover:border-white/60 transition-all duration-300 opacity-0 group-hover/slider:opacity-100"
+        aria-label="Diapositiva anterior"
+    >
+        <i class="fa-solid fa-chevron-left text-sm"></i>
     </button>
-    <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-3 cursor-pointer" aria-label="Ir al slider siguiente">
-        <i class="fa-solid fa-chevron-right fa-2xl"></i>
+
+    <!-- Arrow: Next -->
+    <button
+        id="next-slide"
+        class="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/25 hover:border-white/60 transition-all duration-300 opacity-0 group-hover/slider:opacity-100"
+        aria-label="Siguiente diapositiva"
+    >
+        <i class="fa-solid fa-chevron-right text-sm"></i>
     </button>
+
+    <!-- Dot Navigation + Progress Bar (bottom) -->
+    <div class="absolute bottom-8 left-8 sm:left-12 md:left-20 lg:left-28 z-30 flex items-center gap-3">
+        {slides.map((_, i) => (
+            <button
+                class="dot-btn transition-all duration-300 rounded-full bg-white/40 hover:bg-white/70 focus:outline-none"
+                data-dot={i}
+                aria-label={`Ir a diapositiva ${i + 1}`}
+                style={i === 0 ? "width:28px;height:6px;" : "width:6px;height:6px;"}
+            ></button>
+        ))}
+    </div>
+
+    <!-- Slide counter -->
+    <div class="absolute bottom-8 right-8 sm:right-12 z-30 text-white/60 text-xs font-mono tracking-widest select-none">
+        <span id="current-slide-num">01</span>
+        <span class="mx-1 opacity-40">/</span>
+        <span>{String(slides.length).padStart(2, '0')}</span>
+    </div>
 </div>
 
+<style>
+    /* Ken Burns animation: running only on the active slide */
+    .hero-slide.is-active .ken-burns-img {
+        animation: kenBurns 8s ease-in-out forwards;
+    }
+
+    @keyframes kenBurns {
+        from { transform: scale(1.12); }
+        to   { transform: scale(1.0); }
+    }
+
+    /* Staggered text entrance on the active slide */
+    .hero-slide.is-active .slide-badge,
+    .hero-slide.is-active .slide-title,
+    .hero-slide.is-active .slide-desc,
+    .hero-slide.is-active .slide-cta {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+</style>
+
 <script is:inline>
-    window.onload = function () {
-        const slider = document.getElementById("slider");
-        const prev = document.getElementById("prev");
-        const next = document.getElementById("next");
+    (function () {
+        const track = document.getElementById("slider-track");
+        if (!track) return;
 
-        if (!slider || !prev || !next) return;
+        const slideEls     = Array.from(track.querySelectorAll(".hero-slide"));
+        const dots         = Array.from(document.querySelectorAll(".dot-btn"));
+        const prevBtn      = document.getElementById("prev-slide");
+        const nextBtn      = document.getElementById("next-slide");
+        const counterEl    = document.getElementById("current-slide-num");
+        const total        = slideEls.length;
 
-        let index = 0;
-        const slides = slider.children.length;
+        let current  = 0;
+        let timer    = null;
+        let paused   = false;
+        const INTERVAL = 5000;
 
-        function updateSlider() {
-            slider.style.transform = `translateX(-${index * 100}%)`;
+        function goTo(n) {
+            // Deactivate old
+            slideEls[current].classList.remove("is-active");
+            slideEls[current].style.opacity = "0";
+            slideEls[current].style.zIndex  = "0";
+            slideEls[current].setAttribute("aria-hidden", "true");
+
+            current = (n + total) % total;
+
+            // Activate new
+            const el = slideEls[current];
+            el.style.zIndex  = "10";
+            el.style.opacity = "1";
+            el.setAttribute("aria-hidden", "false");
+
+            // Trigger CSS animations via class (forces reflow)
+            el.classList.remove("is-active");
+            void el.offsetWidth; // reflow
+            el.classList.add("is-active");
+
+            // Update dots
+            dots.forEach((d, i) => {
+                if (i === current) {
+                    d.style.width  = "28px";
+                    d.style.height = "6px";
+                    d.style.backgroundColor = "rgba(255,255,255,0.9)";
+                } else {
+                    d.style.width  = "6px";
+                    d.style.height = "6px";
+                    d.style.backgroundColor = "rgba(255,255,255,0.4)";
+                }
+            });
+
+            // Update counter
+            if (counterEl) counterEl.textContent = String(current + 1).padStart(2, "0");
         }
 
-        function nextSlide() {
-            index = (index + 1) % slides;
-            updateSlider();
+        function startTimer() {
+            clearInterval(timer);
+            if (!paused) timer = setInterval(() => goTo(current + 1), INTERVAL);
         }
 
-        function prevSlide() {
-            index = (index - 1 + slides) % slides;
-            updateSlider();
+        // Init first slide
+        goTo(0);
+        startTimer();
+
+        prevBtn && prevBtn.addEventListener("click", () => { goTo(current - 1); startTimer(); });
+        nextBtn && nextBtn.addEventListener("click", () => { goTo(current + 1); startTimer(); });
+        dots.forEach((d, i) => d.addEventListener("click", () => { goTo(i); startTimer(); }));
+
+        // Pause on hover
+        const hero = document.getElementById("hero-slider");
+        if (hero) {
+            hero.addEventListener("mouseenter", () => { paused = true;  clearInterval(timer); });
+            hero.addEventListener("mouseleave", () => { paused = false; startTimer(); });
         }
 
-        next.addEventListener("click", nextSlide);
-        prev.addEventListener("click", prevSlide);
-
-        setInterval(nextSlide, 4000);
-    };
+        // Keyboard navigation
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft")  { goTo(current - 1); startTimer(); }
+            if (e.key === "ArrowRight") { goTo(current + 1); startTimer(); }
+        });
+    })();
 </script>

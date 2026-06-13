@@ -1,85 +1,120 @@
 ---
-import deluxe1 from "../assets/about-4.png";
-import deluxe2 from "../assets/doscamas.png";
+import img1 from "../assets/about-4.png";
+import img2 from "../assets/doscamas.png";
 ---
 
-<section class="relative py-12 bg-white overflow-hidden"> 
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"> 
-    <!-- 📄 Bloque de texto (centrado verticalmente) -->
-    <div class="relative z-10 order-2 lg:order-1 flex flex-col justify-center h-full"> 
-      <div>
-        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-500 mb-4 text-center lg:text-left">
-          Cabaña Deluxe Mística 1 <span class="text-black text-sm">(para 4 personas)</span>
-        </h2> 
+<section class="py-16 sm:py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        <p class="text-black leading-relaxed text-sm mb-4 text-justify">
-          Perfecta para compartir y disfrutar de un espacio totalmente independiente, nuestras 
-          <strong>Cabañas Deluxe</strong> ofrecen el equilibrio ideal entre confort, privacidad y naturaleza.
+      <!-- ── Text block (left) ── -->
+      <div class="flex flex-col gap-6 order-2 lg:order-1">
+
+        <!-- Label -->
+        <p class="text-xs font-bold tracking-widest text-orange-400 uppercase">
+          Alojamiento & Estancias
         </p>
 
-        <p class="text-black leading-relaxed text-sm mb-4 text-justify">
-          Equipadas con <strong>sala</strong>, refrigerador, termo, tazas y agua, te harán sentir como en casa, 
-          rodeado de la serenidad del <em>Valle Sagrado</em>. Cada detalle ha sido pensado para tu comodidad y descanso.
-        </p>
-
-        <p class="text-black leading-relaxed text-sm mb-4 text-justify">
-          Ideal para 3 o 4 personas, diseñadas con calidez y estilo, rodeadas de vegetación, silencio y energía sanadora.
-        </p>
-
-        <div class="mt-6 bg-orange-50 border border-orange-200 rounded-xl p-4 w-fit shadow-md mx-auto lg:mx-0 text-center">
-          <h3 class="text-orange-500 font-semibold text-lg">Precios por noche</h3>
-          <div class="mt-2 space-y-2 text-sm text-gray-800">
-            <p><strong>Para 3 personas:</strong> S/ 330 <span class="text-black">(desayuno opcional S/ 370)</span></p>
-            <p><strong>Para 4 personas:</strong> S/ 350 <span class="text-black">(desayuno opcional S/ 410)</span></p>
-            <p><strong>Persona adicional:</strong> +S/ 30</p>
-          </div>
+        <!-- Title -->
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+            Cabaña Deluxe Mística 1
+          </h2>
+          <p class="mt-1 text-sm text-gray-500 font-medium">Para 3 – 4 personas · Valle Sagrado</p>
         </div>
 
-        <a 
-          href="https://wa.link/ngq3h9" 
-          class="block mt-6 mx-auto lg:mx-0 w-fit px-5 py-2 bg-orange-400 hover:bg-orange-500 text-white rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 text-sm text-center">
-          Consultar disponibilidad
-          <i class="fa-brands fa-whatsapp ml-2"></i>
-        </a> 
+        <!-- Description -->
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          Perfecta para compartir y disfrutar de un espacio totalmente independiente, nuestras
+          <strong class="text-gray-800">Cabañas Deluxe</strong> ofrecen el equilibrio ideal entre
+          confort, privacidad y naturaleza. Cada detalle ha sido pensado para tu comodidad y descanso
+          en el corazón del <em>Valle Sagrado</em>.
+        </p>
+
+        <!-- Amenities grid -->
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          {[
+            { icon: "fa-solid fa-couch",         text: "Sala de estar privada" },
+            { icon: "fa-solid fa-snowflake",      text: "Refrigerador" },
+            { icon: "fa-solid fa-mug-hot",        text: "Termo & tazas incluidos" },
+            { icon: "fa-solid fa-droplet",        text: "Agua incluida" },
+            { icon: "fa-solid fa-tree",           text: "Rodeada de vegetación" },
+            { icon: "fa-solid fa-moon",           text: "Silencio y energía sanadora" },
+          ].map(item => (
+            <li class="flex items-center gap-2.5 text-sm text-gray-700 font-medium">
+              <span class="w-7 h-7 flex-shrink-0 rounded-lg bg-orange-50 border border-orange-100 flex items-center justify-center">
+                <i class={`${item.icon} text-orange-400 text-[11px]`}></i>
+              </span>
+              {item.text}
+            </li>
+          ))}
+        </ul>
+
+        <!-- Divider -->
+        <hr class="border-gray-100" />
+
+        <!-- Prices + CTA -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 flex-wrap">
+          <!-- Price card -->
+          <div class="rounded-2xl border border-orange-100 bg-orange-50 px-5 py-4 flex flex-col min-w-[200px]">
+            <span class="text-[11px] font-bold text-orange-400 uppercase tracking-widest mb-1">Precios por noche</span>
+            <div class="flex flex-col gap-1 text-sm text-gray-700">
+              <p><span class="font-semibold text-gray-900">3 personas:</span> S/ 330 <span class="text-gray-400 text-xs">(c/desayuno S/ 370)</span></p>
+              <p><span class="font-semibold text-gray-900">4 personas:</span> S/ 350 <span class="text-gray-400 text-xs">(c/desayuno S/ 410)</span></p>
+              <p class="text-xs text-gray-400 mt-0.5">Persona adicional: +S/ 30</p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <a
+            href="https://wa.link/ngq3h9"
+            target="_blank"
+            class="inline-flex items-center gap-2.5 px-6 py-3.5 bg-orange-400 hover:bg-orange-500 text-white font-bold rounded-xl shadow-lg hover:shadow-orange-300/40 transition-all duration-300 text-sm transform hover:-translate-y-0.5"
+            aria-label="Consultar disponibilidad Cabaña Deluxe Mística 1"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            Consultar disponibilidad
+          </a>
+        </div>
+
       </div>
 
-      <!-- 💬 Tarjetas solo visibles en móvil -->
-      <div class="flex flex-col lg:hidden gap-3 mt-6">    
-        <div class="bg-white shadow-lg rounded-xl p-3 text-gray-800 text-xs hover:scale-105 transition-transform duration-300"> 
-          <h4 class="font-semibold mb-1">Espacio acogedor</h4> 
-          <p>Cabañas con sala y zona de descanso rodeadas de naturaleza.</p> 
-        </div> 
-        <div class="bg-white shadow-lg rounded-xl p-3 text-gray-800 text-xs hover:scale-105 transition-transform duration-300"> 
-          <h4 class="font-semibold mb-1">Comodidad y privacidad</h4> 
-          <p>Ambiente cálido ideal para familias o grupos pequeños.</p> 
-        </div> 
-      </div> 
-    </div> 
+      <!-- ── Images block (right) ── -->
+      <div class="relative order-1 lg:order-2">
+        <!-- Main image -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+          <img
+            src={img1.src}
+            alt="Vista principal Cabaña Deluxe Mística 1"
+            class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-3xl pointer-events-none"></div>
+        </div>
 
-    <!-- 🖼️ Bloque de imágenes (dos horizontales) -->
-    <div class="relative w-full order-1 lg:order-2 rounded-3xl overflow-hidden flex flex-col gap-4"> 
-      <img 
-        src={deluxe1.src} 
-        alt="Vista principal Cabaña Deluxe Mística 1" 
-        class="w-full h-[240px] sm:h-[300px] lg:h-[360px] object-cover rounded-2xl shadow-lg"
-      />
-      <img 
-        src={deluxe2.src} 
-        alt="Interior acogedor Cabaña Deluxe Mística 1" 
-        class="w-full h-[240px] sm:h-[300px] lg:h-[360px] object-cover rounded-2xl shadow-lg"
-      />
+        <!-- Floating thumbnail -->
+        <div class="absolute -bottom-6 -left-4 sm:-left-8 w-36 sm:w-48 aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+          <img
+            src={img2.src}
+            alt="Interior Cabaña Deluxe Mística 1"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
 
-      <!-- 💬 Tarjetas flotantes en escritorio -->
-      <div class="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 gap-4 w-[90%] justify-center"> 
-        <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-[240px] text-gray-800 text-xs hover:scale-105 transition-transform duration-300"> 
-          <h4 class="font-semibold mb-1">Espacio acogedor</h4> 
-          <p>Cabañas con sala y zona de descanso rodeadas de naturaleza.</p> 
-        </div> 
-        <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-[240px] text-gray-800 text-xs hover:scale-105 transition-transform duration-300 delay-150"> 
-          <h4 class="font-semibold mb-1">Comodidad y privacidad</h4> 
-          <p>Ambiente cálido ideal para familias o grupos pequeños.</p> 
-        </div> 
-      </div> 
-    </div> 
-  </div> 
+        <!-- Feature pills -->
+        <div class="absolute top-4 right-4 flex flex-col gap-2 items-end">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-white/90 backdrop-blur-sm text-gray-800 shadow-md">
+            <i class="fa-solid fa-couch text-orange-400 text-[10px]"></i>
+            Sala privada incluida
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-white/90 backdrop-blur-sm text-gray-800 shadow-md">
+            <i class="fa-solid fa-users text-orange-400 text-[10px]"></i>
+            Hasta 4 personas
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>

@@ -1,0 +1,595 @@
+---
+import jungleAwakening from "../assets/jungle_awakening.png";
+import andeanSpirit from "../assets/andean_spirit.png";
+import amazonImmersion from "../assets/amazon_immersion.png";
+import sanPedroRitual from "../assets/san_pedro_ritual.png";
+import kamboPurification from "../assets/kambo_purification.png";
+import hongosFullDay from "../assets/hongos_full_day.png";
+
+const detailsData = {
+  "manu-biosphere": {
+    title: "Rainforest Awakening (Manu) — 7 Days",
+    description: "A 7-day deep jungle immersion in the Manu Biosphere. A transformational retreat designed for vision, grounding, and profound nature connection.",
+    image: jungleAwakening.src,
+    features: [
+      "Preparation & guidance",
+      "Safety protocol overview",
+      "Facilitation / ceremony",
+      "Clear next-step plan",
+      "WhatsApp assistance",
+      "Respectful environment"
+    ]
+  },
+  "andean-spirit": {
+    title: "Andean Spirit: Sacred Valley Path — 8 Days",
+    description: "An 8-day journey through the Sacred Valley of the Incas. Experience ancient teachings, Wachuma ceremonies, and deep integration with Andean cosmology.",
+    image: andeanSpirit.src,
+    features: [
+      "Andean cosmology introduction",
+      "Wachuma ceremonies",
+      "Certified local guides",
+      "Integration therapy sessions",
+      "Mountain lodging included",
+      "Organic native meals"
+    ]
+  },
+  "amazon-ayahuasca": {
+    title: "Amazon Ayahuasca Immersion — 5 Days",
+    description: "A profound 5-day immersion into the heart of the Amazon. Connect with the ancestral lineage of Ayahuasca in a safe, held, and sacred sanctuary.",
+    image: amazonImmersion.src,
+    features: [
+      "Shipibo lineage ceremonies",
+      "Experienced facilitators",
+      "Pre-diet instructions",
+      "24/7 on-site support",
+      "Safe jungle environment",
+      "Post-retreat integration"
+    ]
+  },
+  "san-pedro-ritual": {
+    title: "Individual San Pedro Ritual",
+    description: "A private, highly personalized San Pedro ceremony. Designed to heal your heart and reconnect with your personal power in the majestic Andes.",
+    image: sanPedroRitual.src,
+    features: [
+      "1-on-1 private guidance",
+      "Heart-opening medicine",
+      "Sacred fire ritual",
+      "Personal intention setting",
+      "Private consultation",
+      "Dedicated quiet space"
+    ]
+  },
+  "kambo-purification": {
+    title: "Kambo Purification Ritual",
+    description: "A powerful physical and energetic detox ritual. Cleanse your body, boost your immune system, and release dense energies under professional care.",
+    image: kamboPurification.src,
+    features: [
+      "Kambo traditional application",
+      "Complete physical detox",
+      "Post-application care",
+      "Certified practitioner guidance",
+      "Electrolytes & hydration",
+      "Gentle restorative space"
+    ]
+  },
+  "hongos-full-day": {
+    title: "Hongos Full Day Journey",
+    description: "A full-day consciousness-expanding experience with sacred mushrooms. Connect with deep insights, clarity, and guidance in a cozy, supportive community setting.",
+    image: hongosFullDay.src,
+    features: [
+      "Guided micro/macro dosage",
+      "Visual & meditative focus",
+      "Sound therapy ceremony",
+      "Community sharing circle",
+      "Safe, warm indoor space",
+      "Experienced coordinators"
+    ]
+  }
+};
+---
+
+<section class="relative py-16 sm:py-24 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <!-- Header -->
+    <div class="mb-12 text-center">
+      <p class="text-xs font-bold tracking-widest text-[#8F5547] uppercase mb-2">
+        Ceremonies & Experiences
+      </p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2D3E35] tracking-tight leading-tight mb-4">
+        Ancestral Services & Healing Journeys
+      </h2>
+      <p class="max-w-3xl mx-auto text-sm sm:text-base text-gray-600 leading-relaxed">
+        A curated selection of our retreats and ceremonies—designed with preparation, safety, and respectful guidance.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Card 1: Manu Biosphere -->
+      <div class="flex flex-col bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <!-- Image Container -->
+        <div class="p-5 pb-0">
+          <div class="relative h-60 sm:h-64 overflow-hidden rounded-[1.5rem]">
+            <img 
+              src={jungleAwakening.src} 
+              alt="Manu Biosphere: Rainforest Awakening" 
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        
+        <!-- Content Container -->
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 tracking-tight leading-snug">
+              Manu Biosphere: Rainforest Awakening (7 Days)
+            </h3>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-leaf text-[9px]"></i> Jungle
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-spa text-[9px]"></i> Ayahuasca
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-campground text-[9px]"></i> Dieta
+              </span>
+            </div>
+          </div>
+          
+          <!-- Buttons -->
+          <div class="grid grid-cols-2 gap-4 mt-auto">
+            <button 
+              data-details={JSON.stringify(detailsData["manu-biosphere"])}
+              class="details-btn inline-flex items-center justify-center py-1.5 px-3 border border-gray-200 text-gray-700 font-semibold text-xs rounded-lg hover:bg-gray-50 transition-colors duration-300 focus:outline-none"
+            >
+              Details
+            </button>
+            <a 
+              href="https://wa.link/ngq3h9?text=Hola!%20Me%20gustaría%20reservar%20y%20obtener%20más%20información%20sobre%20el%20retiro%20%22Manu%20Biosphere:%20Rainforest%20Awakening%20(7%20Days)%22" 
+              target="_blank" 
+              class="inline-flex items-center justify-center py-1.5 px-3 bg-orange-400 hover:bg-orange-500 text-white font-bold text-xs rounded-lg shadow-sm transition-all duration-300 uppercase tracking-wider gap-1.5"
+              aria-label="Book Manu Biosphere: Rainforest Awakening"
+            >
+              BOOK <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Andean Spirit -->
+      <div class="flex flex-col bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <!-- Image Container -->
+        <div class="p-5 pb-0">
+          <div class="relative h-60 sm:h-64 overflow-hidden rounded-[1.5rem]">
+            <img 
+              src={andeanSpirit.src} 
+              alt="Andean Spirit: Sacred Valley Path" 
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        
+        <!-- Content Container -->
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 tracking-tight leading-snug">
+              Andean Spirit: Sacred Valley Path (8 Days)
+            </h3>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-mountain text-[9px]"></i> Andes
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-seedling text-[9px]"></i> Wachuma
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-comment-dots text-[9px]"></i> Support
+              </span>
+            </div>
+          </div>
+          
+          <!-- Buttons -->
+          <div class="grid grid-cols-2 gap-4 mt-auto">
+            <button 
+              data-details={JSON.stringify(detailsData["andean-spirit"])}
+              class="details-btn inline-flex items-center justify-center py-1.5 px-3 border border-gray-200 text-gray-700 font-semibold text-xs rounded-lg hover:bg-gray-50 transition-colors duration-300 focus:outline-none"
+            >
+              Details
+            </button>
+            <a 
+              href="https://wa.link/ngq3h9?text=Hola!%20Me%20gustaría%20reservar%20y%20obtener%20más%20información%20sobre%20el%20retiro%20%22Andean%20Spirit:%20Sacred%20Valley%20Path%20(8%20Days)%22" 
+              target="_blank" 
+              class="inline-flex items-center justify-center py-1.5 px-3 bg-orange-400 hover:bg-orange-500 text-white font-bold text-xs rounded-lg shadow-sm transition-all duration-300 uppercase tracking-wider gap-1.5"
+              aria-label="Book Andean Spirit: Sacred Valley Path"
+            >
+              BOOK <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Amazon Ayahuasca Immersion -->
+      <div class="flex flex-col bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <!-- Image Container -->
+        <div class="p-5 pb-0">
+          <div class="relative h-60 sm:h-64 overflow-hidden rounded-[1.5rem]">
+            <img 
+              src={amazonImmersion.src} 
+              alt="Amazon Ayahuasca Immersion" 
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        
+        <!-- Content Container -->
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 tracking-tight leading-snug">
+              Amazon Ayahuasca Immersion (5 Days)
+            </h3>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-water text-[9px]"></i> Amazon
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-infinity text-[9px]"></i> Lineage
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-shield-halved text-[9px]"></i> Safety
+              </span>
+            </div>
+          </div>
+          
+          <!-- Buttons -->
+          <div class="grid grid-cols-2 gap-4 mt-auto">
+            <button 
+              data-details={JSON.stringify(detailsData["amazon-ayahuasca"])}
+              class="details-btn inline-flex items-center justify-center py-1.5 px-3 border border-gray-200 text-gray-700 font-semibold text-xs rounded-lg hover:bg-gray-50 transition-colors duration-300 focus:outline-none"
+            >
+              Details
+            </button>
+            <a 
+              href="https://wa.link/ngq3h9?text=Hola!%20Me%20gustaría%20reservar%20y%20obtener%20más%20información%20sobre%20el%20retiro%20%22Amazon%20Ayahuasca%20Immersion%20(5%20Days)%22" 
+              target="_blank" 
+              class="inline-flex items-center justify-center py-1.5 px-3 bg-orange-400 hover:bg-orange-500 text-white font-bold text-xs rounded-lg shadow-sm transition-all duration-300 uppercase tracking-wider gap-1.5"
+              aria-label="Book Amazon Ayahuasca Immersion"
+            >
+              BOOK <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Individual San Pedro Ritual -->
+      <div class="flex flex-col bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <!-- Image Container -->
+        <div class="p-5 pb-0">
+          <div class="relative h-60 sm:h-64 overflow-hidden rounded-[1.5rem]">
+            <img 
+              src={sanPedroRitual.src} 
+              alt="Individual San Pedro Ritual" 
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        
+        <!-- Content Container -->
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 tracking-tight leading-snug">
+              Individual San Pedro Ritual
+            </h3>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-user text-[9px]"></i> 1-On-1
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-heart text-[9px]"></i> Heart
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-mountain text-[9px]"></i> Andes
+              </span>
+            </div>
+          </div>
+          
+          <!-- Buttons -->
+          <div class="grid grid-cols-2 gap-4 mt-auto">
+            <button 
+              data-details={JSON.stringify(detailsData["san-pedro-ritual"])}
+              class="details-btn inline-flex items-center justify-center py-1.5 px-3 border border-gray-200 text-gray-700 font-semibold text-xs rounded-lg hover:bg-gray-50 transition-colors duration-300 focus:outline-none"
+            >
+              Details
+            </button>
+            <a 
+              href="https://wa.link/ngq3h9?text=Hola!%20Me%20gustaría%20reservar%20y%20obtener%20más%20información%20sobre%20el%20%22Individual%20San%20Pedro%20Ritual%22" 
+              target="_blank" 
+              class="inline-flex items-center justify-center py-1.5 px-3 bg-orange-400 hover:bg-orange-500 text-white font-bold text-xs rounded-lg shadow-sm transition-all duration-300 uppercase tracking-wider gap-1.5"
+              aria-label="Book Individual San Pedro Ritual"
+            >
+              BOOK <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5: Kambo Purification -->
+      <div class="flex flex-col bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <!-- Image Container -->
+        <div class="p-5 pb-0">
+          <div class="relative h-60 sm:h-64 overflow-hidden rounded-[1.5rem]">
+            <img 
+              src={kamboPurification.src} 
+              alt="Kambo Purification" 
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        
+        <!-- Content Container -->
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 tracking-tight leading-snug">
+              Kambo Purification
+            </h3>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-frog text-[9px]"></i> Kambo
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-droplet text-[9px]"></i> Detox
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-shield-halved text-[9px]"></i> Support
+              </span>
+            </div>
+          </div>
+          
+          <!-- Buttons -->
+          <div class="grid grid-cols-2 gap-4 mt-auto">
+            <button 
+              data-details={JSON.stringify(detailsData["kambo-purification"])}
+              class="details-btn inline-flex items-center justify-center py-1.5 px-3 border border-gray-200 text-gray-700 font-semibold text-xs rounded-lg hover:bg-gray-50 transition-colors duration-300 focus:outline-none"
+            >
+              Details
+            </button>
+            <a 
+              href="https://wa.link/ngq3h9?text=Hola!%20Me%20gustaría%20reservar%20y%20obtener%20más%20información%20sobre%20la%20%22Kambo%20Purification%22" 
+              target="_blank" 
+              class="inline-flex items-center justify-center py-1.5 px-3 bg-orange-400 hover:bg-orange-500 text-white font-bold text-xs rounded-lg shadow-sm transition-all duration-300 uppercase tracking-wider gap-1.5"
+              aria-label="Book Kambo Purification"
+            >
+              BOOK <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6: Hongos Full Day -->
+      <div class="flex flex-col bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <!-- Image Container -->
+        <div class="p-5 pb-0">
+          <div class="relative h-60 sm:h-64 overflow-hidden rounded-[1.5rem]">
+            <img 
+              src={hongosFullDay.src} 
+              alt="Hongos Full Day" 
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        
+        <!-- Content Container -->
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 tracking-tight leading-snug">
+              Hongos Full Day
+            </h3>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-eye text-[9px]"></i> Insight
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-gem text-[9px]"></i> Clarity
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF3EE] text-[#8F5547] border border-[#F2E5D8]/80">
+                <i class="fa-solid fa-comments text-[9px]"></i> Guidance
+              </span>
+            </div>
+          </div>
+          
+          <!-- Buttons -->
+          <div class="grid grid-cols-2 gap-4 mt-auto">
+            <button 
+              data-details={JSON.stringify(detailsData["hongos-full-day"])}
+              class="details-btn inline-flex items-center justify-center py-1.5 px-3 border border-gray-200 text-gray-700 font-semibold text-xs rounded-lg hover:bg-gray-50 transition-colors duration-300 focus:outline-none"
+            >
+              Details
+            </button>
+            <a 
+              href="https://wa.link/ngq3h9?text=Hola!%20Me%20gustaría%20reservar%20y%20obtener%20más%20información%20sobre%20el%20retiro%20%22Hongos%20Full%20Day%22" 
+              target="_blank" 
+              class="inline-flex items-center justify-center py-1.5 px-3 bg-orange-400 hover:bg-orange-500 text-white font-bold text-xs rounded-lg shadow-sm transition-all duration-300 uppercase tracking-wider gap-1.5"
+              aria-label="Book Hongos Full Day"
+            >
+              BOOK <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Details Modal -->
+<div 
+  id="details-modal" 
+  class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4 transition-all duration-300 opacity-0"
+  aria-hidden="true"
+>
+  <div 
+    id="modal-card" 
+    class="w-full max-w-2xl bg-[#FAF5EE] rounded-[2rem] overflow-hidden shadow-2xl relative transform transition-all duration-300 scale-95"
+  >
+    <!-- Close Button -->
+    <button 
+      id="close-modal" 
+      class="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full w-9 h-9 flex items-center justify-center transition-colors duration-200 z-10 focus:outline-none"
+      aria-label="Close details"
+    >
+      <i class="fa-solid fa-xmark text-sm"></i>
+    </button>
+
+    <!-- Top Image -->
+    <div class="relative w-full h-48 sm:h-60 overflow-hidden">
+      <img 
+        id="modal-image" 
+        src="" 
+        alt="" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Body Content -->
+    <div class="p-6 sm:p-8">
+      <h3 
+        id="modal-title" 
+        class="text-[#8E4A38] text-xl sm:text-2xl font-bold mb-3 tracking-tight"
+      >
+      </h3>
+      <p 
+        id="modal-desc" 
+        class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6"
+      >
+      </p>
+
+      <!-- Features Grid -->
+      <div 
+        id="modal-features" 
+        class="grid grid-cols-1 sm:grid-cols-2 gap-3"
+      >
+        <!-- Dynamic Features will be inserted here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  interface ModalData {
+    title: string;
+    description: string;
+    image: string;
+    features: string[];
+  }
+
+  const buttons = document.querySelectorAll('.details-btn');
+  const modal = document.getElementById('details-modal');
+  const modalCard = document.getElementById('modal-card');
+  const modalImage = document.getElementById('modal-image') as HTMLImageElement;
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalFeatures = document.getElementById('modal-features');
+  const closeModal = document.getElementById('close-modal');
+
+  const showModal = (data: ModalData) => {
+    if (!modal || !modalCard || !modalImage || !modalTitle || !modalDesc || !modalFeatures) return;
+
+    // Populate data
+    modalImage.src = data.image;
+    modalImage.alt = data.title;
+    modalTitle.textContent = data.title;
+    modalDesc.textContent = data.description;
+
+    // Build features grid
+    modalFeatures.innerHTML = '';
+    data.features.forEach((feat) => {
+      const item = document.createElement('div');
+      item.className = 'flex items-center gap-2.5 bg-white shadow-sm px-4 py-3.5 rounded-2xl text-[11px] sm:text-xs text-gray-800 border border-gray-100/50';
+      item.innerHTML = `<span class="text-[#8F5547] text-sm font-semibold">✓</span> <span class="font-semibold">${feat}</span>`;
+      modalFeatures.appendChild(item);
+    });
+
+    // Make visible and set display
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    
+    // Force browser reflow to register transition classes
+    void modal.offsetWidth;
+
+    // Start transition
+    modal.classList.remove('opacity-0');
+    modalCard.classList.remove('scale-95');
+    modalCard.classList.add('scale-100');
+
+    // Prevent background scrolling without layout shift
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.paddingRight = scrollbarWidth + 'px';
+    document.body.style.overflow = 'hidden';
+  };
+
+  const hideModal = () => {
+    if (!modal || !modalCard) return;
+
+    // Transition out
+    modal.classList.add('opacity-0');
+    modalCard.classList.remove('scale-100');
+    modalCard.classList.add('scale-95');
+
+    // Wait for transition before fully hiding
+    setTimeout(() => {
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }, 300);
+  };
+
+  // Add click handlers
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const rawDetails = btn.getAttribute('data-details');
+      if (rawDetails) {
+        showModal(JSON.parse(rawDetails));
+      }
+    });
+  });
+
+  if (closeModal) {
+    closeModal.addEventListener('click', hideModal);
+  }
+
+  // Click outside to close
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        hideModal();
+      }
+    });
+  }
+
+  // Close on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+      hideModal();
+    }
+  });
+</script>
