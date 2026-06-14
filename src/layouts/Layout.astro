@@ -53,5 +53,21 @@ import "../styles/global.css";
 	</head>
 	<body>
 		<slot />
+
+		<!-- Floating WhatsApp Button -->
+		<a
+			href="https://wa.link/ngq3h9"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-green-300"
+			aria-label="Contactar por WhatsApp"
+			title="Contactar por WhatsApp"
+		>
+			<span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping -z-10 group-hover:animate-none"></span>
+			<svg class="w-7 h-7 fill-current transition-transform duration-300 group-hover:rotate-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.249 8.477 3.517 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.724-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97-1.862-1.868-4.343-2.898-7.01-2.899-5.442 0-9.87 4.372-9.874 9.802-.001 1.962.506 3.876 1.466 5.561L1.1 21.65l5.548-1.496zM17.135 14.1c-.28-.14-1.654-.816-1.91-.91-.255-.093-.441-.14-.627.14-.186.28-.718.91-.879 1.096-.162.186-.324.21-.605.07-.28-.14-1.18-.435-2.247-1.39-.83-.74-1.39-1.653-1.55-1.93-.163-.28-.018-.431.122-.571.127-.126.28-.327.42-.49.14-.163.18-.28.28-.467.093-.186.046-.35-.02-.49-.07-.14-.627-1.517-.859-2.078-.226-.543-.473-.468-.627-.476-.154-.007-.33-.007-.506-.007-.176 0-.462.066-.704.327-.242.261-.925.904-.925 2.2 0 1.296.944 2.548 1.076 2.72.132.173 1.86 2.84 4.505 3.986.63.27 1.12.43 1.5.55.633.2 1.21.17 1.666.1 0-.6-.166-1.654-.816-1.91z"/>
+			</svg>
+		</a>
 	</body>
+
 </html>
